@@ -6,19 +6,25 @@ import reportWebVitals from './reportWebVitals';
 // import { BrowserRouter } from 'react-router-dom';
 import Signin1 from './compoments/Signin1';
 import Home from './compoments/home';
+
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
+import Login from './compoments/Login';
+import LayoutEditUesr from './compoments/LayoutEditUser';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <><React.StrictMode>
     <App />
-  </React.StrictMode><BrowserRouter>
+  </React.StrictMode>
+    <BrowserRouter>
       <Routes>
-        <Route path='/login' element={<Signin1 />} />
+        {/* <Route path='/login' element={<Signin1 />} /> */}
         <Route path='/home' element={<Home />} />
+        <Route path='/' element={<LayoutEditUesr />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
     </BrowserRouter></>
 );
